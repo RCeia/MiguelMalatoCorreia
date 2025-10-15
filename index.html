@@ -39,8 +39,7 @@
     }
   </style>
 </head>
-
-<body class="bg-emerald-50 text-stone-900 font-[Montserrat]">
+<body class="bg-emerald-50 text-stone-900 font-[Montserrat] flex flex-col min-h-screen">
 
   <!-- Header -->
   <header class="bg-[#15332b] py-6 text-center shadow-md border-b-4 border-[#7B0323]">
@@ -50,21 +49,19 @@
     <p class="text-[#7B0323] text-2xl font-semibold mt-2 italic">Tinto 2024</p>
   </header>
 
-  <main>
-    <!-- Declaração Nutricional ocupa todo o espaço disponível -->
-    <section class="relative fullscreen w-full">
+  <main class="flex-1 flex flex-col">
+    <!-- Declaração Nutricional ocupa todo o espaço restante -->
+    <section class="relative flex-1 flex items-center justify-center w-full">
       <div class="absolute inset-0">
         <img src="leaves2.png" alt="Leaves Background" class="w-full h-full object-cover filter blur-[2px] sepia-[5%]">
-        <div class="absolute inset-0 bg-gradient-to-b from-[#7B0323]/20 via-[#7B0323]/30 to-[#15332b]/40"></div>
-
+        <!-- stronger overlay for better contrast -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#7B0323]/30 via-[#7B0323]/40 to-[#15332b]/60"></div>
       </div>
 
       <div class="relative z-10 text-center max-w-3xl px-6">
-        <h3 class="text-3xl md:text-4xl font-semibold mb-8 text-[#7B0323] tracking-wide font-[Playfair_Display] drop-shadow-[0_2px_3px_rgba(0,0,0,0.3)]">
-  Declaração Nutricional e Ingredientes
-</h3>
-
-
+        <h3 class="text-3xl md:text-4xl font-semibold mb-8 text-[#7B0323] tracking-wide font-[Playfair_Display] drop-shadow-[0_2px_3px_rgba(0,0,0,0.4)] bg-white/80 px-6 py-3 rounded-xl inline-block backdrop-blur-sm">
+          Declaração Nutricional e Ingredientes
+        </h3>
 
         <div class="overflow-x-auto rounded-2xl shadow-lg bg-white/90 backdrop-blur-sm border border-[#7B0323]/60">
           <table class="min-w-full text-stone-800 rounded-2xl overflow-hidden border border-[#7B0323]/60">
@@ -98,10 +95,11 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-[#15332b] text-emerald-50 text-center py-8 border-t-4 border-[#7B0323] mt-auto">
+  <footer class="bg-[#15332b] text-emerald-50 text-center py-8 border-t-4 border-[#7B0323]">
     <p class="text-lg font-[Playfair_Display]">Miguel Bernardo Lourenço da Silva Malato Correia</p>
     <p class="text-sm mt-1">Quinta do Souto da Sé, Estrada da Serra, 7300-085 Portalegre</p>
   </footer>
 
 </body>
+
 </html>
