@@ -7,11 +7,22 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <style>
-    .textured-bg {
-      background-image: url('vineyard-texture.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-blend-mode: overlay;
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    section.fullscreen {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   </style>
 </head>
@@ -26,65 +37,57 @@
     <p class="text-[#7B0323] text-2xl font-semibold mt-2 italic">Tinto 2024</p>
   </header>
 
-  <!-- Hero Section -->
-  <section class="relative h-[70vh] w-full">
-    <div class="absolute inset-0">
-      <img src="leaves2.png" alt="Leaves Background" class="w-full h-full object-cover filter blur-[2px] sepia-[5%]">
-      <div class="absolute inset-0 bg-[#7B0323]/10"></div>
-    </div>
+  <main>
+    <!-- Declaração Nutricional ocupa todo o espaço disponível -->
+    <section class="relative fullscreen w-full">
+      <div class="absolute inset-0">
+        <img src="leaves2.png" alt="Leaves Background" class="w-full h-full object-cover filter blur-[2px] sepia-[5%]">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#7B0323]/20 via-[#7B0323]/30 to-[#15332b]/40"></div>
 
-    <div class="relative z-10 flex flex-col items-center justify-center text-center h-full px-6">
-      <h2 class="text-4xl md:text-5xl font-[Playfair_Display] font-bold mb-4 tracking-wide text-black">
-        A Essência do Alentejo
-      </h2>
-      <p class="max-w-2xl text-lg md:text-xl text-black font-medium">
-        Produzido com dedicação e respeito pela terra, refletindo o equilíbrio entre tradição e natureza.
-      </p>
-    </div>
-  </section>
-
-  <!-- Wine Specs (Tabela de Ensaios) -->
-  <section class="py-16 px-8 md:px-20 bg-emerald-50">
-    <div class="max-w-5xl mx-auto text-center">
-      <h3 class="text-3xl font-semibold mb-10 text-[#7B0323] tracking-wide font-[Playfair_Display]">
-        Resultados Analíticos
-      </h3>
-      <div class="overflow-x-auto">
-        <table class="min-w-full border border-[#7B0323] bg-white text-left text-stone-800 shadow-md rounded-xl overflow-hidden">
-          <thead class="bg-[#7B0323] text-white">
-            <tr>
-              <th class="px-4 py-2">Ensaio</th>
-              <th class="px-4 py-2">Valor</th>
-              <th class="px-4 py-2">Unidades</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b"><td class="px-4 py-2">Acidez Total (em ácido tartárico)</td><td>5,0</td><td>g/dm³</td></tr>
-            <tr class="border-b"><td class="px-4 py-2">Acidez Volátil</td><td>0,71</td><td>g/dm³</td></tr>
-            <tr class="border-b"><td class="px-4 py-2">Açúcares Totais</td><td>0,7</td><td>g/dm³</td></tr>
-            <tr class="border-b"><td class="px-4 py-2">Dióxido de Enxofre Total</td><td>41</td><td>mg/dm³</td></tr>
-            <tr class="border-b"><td class="px-4 py-2">pH</td><td>3,67</td><td>-</td></tr>
-            <tr class="border-b"><td class="px-4 py-2">Título Alcoométrico Volúmico Adquirido</td><td>13,2</td><td>% vol.</td></tr>
-            <tr class="border-b"><td class="px-4 py-2">Título Alcoométrico Volúmico Total</td><td>13,2</td><td>% vol.</td></tr>
-            <tr class="border-b"><td class="px-4 py-2">Valor Energético</td><td>77</td><td>kcal/100cm³</td></tr>
-            <tr><td class="px-4 py-2">Valor Energético</td><td>318</td><td>kJ/100cm³</td></tr>
-          </tbody>
-        </table>
       </div>
-      <p class="text-sm text-stone-700 mt-2 italic">
-          <span class="font-semibold text-[#7B0323]">Ingredientes:</span> uvas, sulfitos
+
+      <div class="relative z-10 text-center max-w-3xl px-6">
+        <h3 class="text-3xl md:text-4xl font-semibold mb-8 text-[#7B0323] tracking-wide font-[Playfair_Display] drop-shadow-[0_2px_3px_rgba(0,0,0,0.3)]">
+  Declaração Nutricional e Ingredientes
+</h3>
+
+
+
+        <div class="overflow-x-auto rounded-2xl shadow-lg bg-white/90 backdrop-blur-sm border border-[#7B0323]/60">
+          <table class="min-w-full text-stone-800 rounded-2xl overflow-hidden border border-[#7B0323]/60">
+            <thead class="bg-[#7B0323] text-white text-sm uppercase tracking-wider">
+              <tr>
+                <th class="px-6 py-3 text-left">Medição</th>
+                <th class="px-6 py-3 text-left">Valor</th>
+                <th class="px-6 py-3 text-left">Unidades</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[#7B0323]/20">
+              <tr class="hover:bg-emerald-50 transition-colors">
+                <td class="px-6 py-3 font-medium text-left">Valor Energético</td>
+                <td class="px-6 py-3 text-left">77</td>
+                <td class="px-6 py-3 text-left">kcal / 100 cm³</td>
+              </tr>
+              <tr class="hover:bg-emerald-50 transition-colors">
+                <td class="px-6 py-3 font-medium text-left">Valor Energético</td>
+                <td class="px-6 py-3 text-left">318</td>
+                <td class="px-6 py-3 text-left">kJ / 100 cm³</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-stone-700 mt-6 italic text-base leading-relaxed bg-white/80 inline-block px-4 py-1 rounded-lg">
+          <span class="font-semibold text-[#7B0323] not-italic"></span> Uvas, sulfitos.
         </p>
-    </div>
-    
-  </section>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="bg-[#15332b] text-emerald-50 text-center py-8 border-t-4 border-[#7B0323]">
+  <footer class="bg-[#15332b] text-emerald-50 text-center py-8 border-t-4 border-[#7B0323] mt-auto">
     <p class="text-lg font-[Playfair_Display]">Miguel Bernardo Lourenço da Silva Malato Correia</p>
     <p class="text-sm mt-1">Quinta do Souto da Sé, Estrada da Serra, 7300-085 Portalegre</p>
-    <div class="flex justify-center space-x-6 mt-4">
-      <a href="#" class="hover:text-[#7B0323] transition">Contactar</a>
-    </div>
   </footer>
 
 </body>
