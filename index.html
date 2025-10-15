@@ -24,6 +24,19 @@
       align-items: center;
       justify-content: center;
     }
+    .fullscreen {
+      height: 100vh; /* Default for desktop */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Use dynamic viewport height only on small devices */
+    @media (max-width: 768px) {
+      .fullscreen {
+        height: 100dvh;
+      }
+    }
   </style>
 </head>
 
