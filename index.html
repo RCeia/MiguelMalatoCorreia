@@ -1,19 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nature Rustic Wine — Template</title>
+  <title>Quinta do Souto da Sé</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <style>
-    /* Leaf pattern overlay for hero */
-    .leaf-overlay {
-      background-image: url('leaves.png');
-      background-repeat: repeat;
-      opacity: 0.15;
-    }
-
-    /* Vineyard texture for sections */
     .textured-bg {
       background-image: url('vineyard-texture.jpg');
       background-size: cover;
@@ -22,76 +15,94 @@
     }
   </style>
 </head>
-<body class="bg-emerald-50 text-stone-900 font-serif">
+
+<body class="bg-emerald-50 text-stone-900 font-[Montserrat]">
 
   <!-- Header -->
-  <header class="bg-emerald-900 py-6 text-center shadow-md border-b-4 border-[#5e1a1a]">
-    <h1 class="text-4xl font-bold tracking-widest text-white">Nature Rustic Wine</h1>
-
-    <p class="text-emerald-100 italic mt-1 ">Where nature meets artisanal tradition</p>
+  <header class="bg-[#15332b] py-6 text-center shadow-md border-b-4 border-[#7B0323]">
+    <h1 class="text-5xl font-[Playfair_Display] font-semibold tracking-widest text-[#fafafa]">
+      Quinta do Souto da Sé
+    </h1>
+    <p class="text-[#7B0323] text-2xl font-semibold mt-2 italic">Tinto 2024</p>
   </header>
 
   <!-- Hero Section -->
   <section class="relative h-[70vh] w-full">
     <div class="absolute inset-0">
-      <img src="leaves.png" alt="Leaves Background" class="w-full h-full object-cover filter blur-sm sepia-[10%]">
-      <div class="absolute inset-0 bg-emerald-900/15"></div>
+      <img src="leaves2.png" alt="Leaves Background" class="w-full h-full object-cover filter blur-[2px] sepia-[5%]">
+      <div class="absolute inset-0 bg-[#7B0323]/10"></div>
     </div>
 
     <div class="relative z-10 flex flex-col items-center justify-center text-center h-full px-6">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4 tracking-wide text-black">
-        Signature Wine
+      <h2 class="text-4xl md:text-5xl font-[Playfair_Display] font-bold mb-4 tracking-wide text-black">
+        A Essência do Alentejo
       </h2>
-      <p class="max-w-2xl text-lg md:text-xl text-black">
-        Handcrafted from the finest grapes, capturing the harmony of earth, sun, and nature.
+      <p class="max-w-2xl text-lg md:text-xl text-black font-medium">
+        Produzido com dedicação e respeito pela terra, refletindo o equilíbrio entre tradição e natureza.
       </p>
-      <button class="mt-6 bg-[#5e1a1a] text-emerald-50 px-6 py-3 rounded-xl hover:bg-[#7b2c2c] hover:scale-105 transition-transform shadow-md">
-        Discover More
-      </button>
     </div>
   </section>
 
   <!-- Wine Description -->
   <section class="py-16 px-8 md:px-20 textured-bg bg-emerald-100">
-    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-      <img src="wineBottle.jpg" alt="Wine Bottle" class="rounded-3xl shadow-xl border-4 border-[#5e1a1a]">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center border-t-4 border-b-4 border-[#7B0323] py-8 px-4 rounded-3xl shadow-inner bg-emerald-50/60">
+      <img src="wineBottle.jpg" alt="Garrafa de Vinho" class="rounded-3xl shadow-xl border-4 border-[#7B0323]">
       <div>
-        <h3 class="text-3xl font-semibold mb-4 text-[#5e1a1a] tracking-wide">Wine Name</h3>
+        <h3 class="text-3xl font-semibold mb-4 text-[#7B0323] tracking-wide font-[Playfair_Display]">
+          Quinta do Souto da Sé
+        </h3>
         <p class="text-lg leading-relaxed mb-6 text-stone-800">
-          Describe your wine here — earthy aromas, vibrant notes, subtle oak, and natural fermentation.
-          Share the story of the vineyard, the artisanal crafting, and the harmony with nature.
+          O Quinta do Souto da Sé Tinto 2024 é poderoso e equilibrado, com acidez e frescura bem marcadas,
+           resultado da maturação completa das uvas Aragonêz e Alicante Bouschet em encosta granítica a 700 metros.
+            Minimalista e telúrico, fermentado longamente em lagar e remontado manualmente, não filtrado, revela notas
+             de frutos vermelhos maduros, especiarias subtis e uma textura harmoniosa.
         </p>
-        <button class="bg-[#5e1a1a] text-emerald-50 px-6 py-3 rounded-xl hover:bg-[#7b2c2c] hover:scale-105 transition-transform">
-          Learn More
-        </button>
+        <p class="text-sm text-stone-700 mt-2 italic">
+          <span class="font-semibold text-[#7B0323]">Ingredientes:</span> uvas, sulfitos
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Wine Specs -->
+  <!-- Wine Specs (Tabela de Ensaios) -->
   <section class="py-16 px-8 md:px-20 bg-emerald-50">
-    <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-3xl font-semibold mb-10 text-[#5e1a1a] tracking-wide">Wine Specifications</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 text-lg">
-        <p><span class="font-bold text-[#5e1a1a]">Alcohol Content:</span> [Insert %]</p>
-        <p><span class="font-bold text-[#5e1a1a]">Grape Variety:</span> [Insert Variety]</p>
-        <p><span class="font-bold text-[#5e1a1a]">Region:</span> [Insert Region]</p>
-        <p><span class="font-bold text-[#5e1a1a]">Vintage:</span> [Insert Year]</p>
-        <p><span class="font-bold text-[#5e1a1a]">Tasting Notes:</span> [Insert Notes]</p>
-        <p><span class="font-bold text-[#5e1a1a]">Pairing:</span> [Insert Pairing Info]</p>
-        <p><span class="font-bold text-[#5e1a1a]">Volume:</span> [Insert Bottle Size]</p>
-        <p><span class="font-bold text-[#5e1a1a]">Serving Temp.:</span> [Insert °C]</p>
+    <div class="max-w-5xl mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-10 text-[#7B0323] tracking-wide font-[Playfair_Display]">
+        Resultados Analíticos
+      </h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full border border-[#7B0323] bg-white text-left text-stone-800 shadow-md rounded-xl overflow-hidden">
+          <thead class="bg-[#7B0323] text-white">
+            <tr>
+              <th class="px-4 py-2">Ensaio</th>
+              <th class="px-4 py-2">Valor</th>
+              <th class="px-4 py-2">Unidades</th>
+              <th class="px-4 py-2">Método</th>
+              <th class="px-4 py-2">Data Ensaio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b"><td class="px-4 py-2">Acidez Total (em ácido tartárico)</td><td>5,0</td><td>g/dm³</td><td>PT 025 ed.11</td><td>2025/09/23</td></tr>
+            <tr class="border-b"><td class="px-4 py-2">Acidez Volátil</td><td>0,71</td><td>g/dm³</td><td>PT 024 ed.10</td><td>2025/09/23</td></tr>
+            <tr class="border-b"><td class="px-4 py-2">Açúcares Totais</td><td>0,7</td><td>g/dm³</td><td>PT 039 ed.10</td><td>2025/09/23</td></tr>
+            <tr class="border-b"><td class="px-4 py-2">Dióxido de Enxofre Total</td><td>41</td><td>mg/dm³</td><td>PT 044 ed.3</td><td>2025/09/23</td></tr>
+            <tr class="border-b"><td class="px-4 py-2">pH</td><td>3,67</td><td>-</td><td>OIV-MA-AS313-15:R2011</td><td>2025/09/23</td></tr>
+            <tr class="border-b"><td class="px-4 py-2">Título Alcoométrico Volúmico Adquirido</td><td>13,2</td><td>% vol.</td><td>PT 054 ed.5</td><td>2025/09/23</td></tr>
+            <tr class="border-b"><td class="px-4 py-2">Título Alcoométrico Volúmico Total</td><td>13,2</td><td>% vol.</td><td>PT 014 ed.11</td><td>2025/09/23</td></tr>
+            <tr class="border-b"><td class="px-4 py-2">Valor Energético</td><td>77</td><td>kcal/100cm³</td><td>Reg. (UE) 1169/2011</td><td>2025/09/23</td></tr>
+            <tr><td class="px-4 py-2">Valor Energético</td><td>318</td><td>kJ/100cm³</td><td>Reg. (UE) 1169/2011</td><td>2025/09/23</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-emerald-900 text-emerald-50 text-center py-8 border-t-4 border-[#5e1a1a]">
-    <p>&copy; 2025 Nature Rustic Wine. All Rights Reserved.</p>
+  <footer class="bg-[#15332b] text-emerald-50 text-center py-8 border-t-4 border-[#7B0323]">
+    <p class="text-lg font-[Playfair_Display]">Miguel Bernardo Lourenço da Silva Malato Correia</p>
+    <p class="text-sm mt-1">Quinta do Souto da Sé, Estrada da Serra, 7300-085 Portalegre</p>
     <div class="flex justify-center space-x-6 mt-4">
-      <a href="#" class="hover:text-[#7b2c2c] transition">Instagram</a>
-      <a href="#" class="hover:text-[#7b2c2c] transition">Facebook</a>
-      <a href="#" class="hover:text-[#7b2c2c] transition">Contact</a>
+      <a href="#" class="hover:text-[#7B0323] transition">Contactar</a>
     </div>
   </footer>
 
